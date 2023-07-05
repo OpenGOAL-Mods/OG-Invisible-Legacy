@@ -308,6 +308,33 @@ void extract_from_level(const ObjectFileDB& db,
       output_folder / fmt::format("{}.fr3", dgo_name.substr(0, dgo_name.length() - 4)),
       compressed.data(), compressed.size());
 
+  file_util::write_binary_file(output_folder / fmt::format("BEA.fr3"), compressed.data(), compressed.size());
+  file_util::write_binary_file(output_folder / fmt::format("CIT.fr3"), compressed.data(), compressed.size());
+  file_util::write_binary_file(output_folder / fmt::format("DAR.fr3"), compressed.data(), compressed.size());
+  file_util::write_binary_file(output_folder / fmt::format("DEM.fr3"), compressed.data(), compressed.size());
+  file_util::write_binary_file(output_folder / fmt::format("FIC.fr3"), compressed.data(), compressed.size());
+  file_util::write_binary_file(output_folder / fmt::format("FIN.fr3"), compressed.data(), compressed.size());
+  file_util::write_binary_file(output_folder / fmt::format("INT.fr3"), compressed.data(), compressed.size());
+  file_util::write_binary_file(output_folder / fmt::format("JUB.fr3"), compressed.data(), compressed.size());
+  file_util::write_binary_file(output_folder / fmt::format("JUN.fr3"), compressed.data(), compressed.size());
+  file_util::write_binary_file(output_folder / fmt::format("LAV.fr3"), compressed.data(), compressed.size());
+  file_util::write_binary_file(output_folder / fmt::format("MAI.fr3"), compressed.data(), compressed.size());
+  file_util::write_binary_file(output_folder / fmt::format("MIS.fr3"), compressed.data(), compressed.size());
+  file_util::write_binary_file(output_folder / fmt::format("OGR.fr3"), compressed.data(), compressed.size());
+  file_util::write_binary_file(output_folder / fmt::format("ROB.fr3"), compressed.data(), compressed.size());
+  file_util::write_binary_file(output_folder / fmt::format("ROL.fr3"), compressed.data(), compressed.size());
+  file_util::write_binary_file(output_folder / fmt::format("SNO.fr3"), compressed.data(), compressed.size());
+  file_util::write_binary_file(output_folder / fmt::format("SUB.fr3"), compressed.data(), compressed.size());
+  file_util::write_binary_file(output_folder / fmt::format("SUN.fr3"), compressed.data(), compressed.size());
+  file_util::write_binary_file(output_folder / fmt::format("SWA.fr3"), compressed.data(), compressed.size());
+  file_util::write_binary_file(output_folder / fmt::format("TIT.fr3"), compressed.data(), compressed.size());
+  file_util::write_binary_file(output_folder / fmt::format("TRA.fr3"), compressed.data(), compressed.size());
+  file_util::write_binary_file(output_folder / fmt::format("TSZ.fr3"), compressed.data(), compressed.size());
+  file_util::write_binary_file(output_folder / fmt::format("VI1.fr3"), compressed.data(), compressed.size());
+  file_util::write_binary_file(output_folder / fmt::format("VI2.fr3"), compressed.data(), compressed.size());
+  file_util::write_binary_file(output_folder / fmt::format("VI3.fr3"), compressed.data(), compressed.size());
+
+
   if (dump_level) {
     auto back_file_path = file_util::get_jak_project_dir() / "glb_out" /
                           fmt::format("{}_background.glb", level_data.level_name);
